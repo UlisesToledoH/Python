@@ -46,7 +46,7 @@ def delete_task(id):
         print(f"Tarea removida: {removed['desc']}")
     except IndexError:
         print("\nNo existe la tarea")
-    
+        
 def main():
     parser = argparse.ArgumentParser(description="Gestor de tareas CLI")
     sub = parser.add_subparsers(dest='cmd', required=True)
