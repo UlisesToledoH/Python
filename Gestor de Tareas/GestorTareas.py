@@ -2,7 +2,7 @@ import json
 import os
 import argparse
 
-task_file = 'taks.json'
+task_file = 'tasks.json'
 
 def load_taks():
     if not os.path.exists(task_file):
@@ -12,7 +12,7 @@ def load_taks():
 
 def save_tasks(tasks):
     with open(task_file, 'w', encoding='utf-8') as file:
-        json.dump(task_file,file,indent=2,ensure_ascii=False)
+        json.dump(tasks,file,indent=2,ensure_ascii=False)
 
 def add_taks(desc):
     tasks = load_taks()
@@ -51,6 +51,7 @@ def main():
     parser = argparse.ArgumentParser(description="Gestor de tareas CLI")
     sub = parser.add_subparsers(dest='cmd', required=True)
 
+    #comandos con -h
     sub.add_parser('list', help='Listar todas las tareas')
     p_add = sub.add_parser('add', help='Agregar una nueva tarea')
     p_add.add_argument('desc', help='Descripción de la tarea')

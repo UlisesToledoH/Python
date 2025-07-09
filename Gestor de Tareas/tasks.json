@@ -1,15 +1,15 @@
 [
   {
     "desc": "Repaso Python",
-    "done": false
+    "done": true
   },
   {
     "desc": "Enviar informe con tablas SQL",
-    "done": true
+    "done": false
   },
   {
     "desc": "Enviar mail a equipo de desarrollo",
-    "done": true
+    "done": false
   },
   {
     "desc": "Atender tickets pendientes",
@@ -17,6 +17,6 @@
   },
   {
     "desc": "Realizar pipeline en Dataflow",
-    "done": true
+    "done": false
   }
 ]
