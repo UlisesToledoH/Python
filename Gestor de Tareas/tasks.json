@@ -1,0 +1,22 @@
+[
+  {
+    "desc": "Repaso Python",
+    "done": false
+  },
+  {
+    "desc": "Enviar informe con tablas SQL",
+    "done": true
+  },
+  {
+    "desc": "Enviar mail a equipo de desarrollo",
+    "done": true
+  },
+  {
+    "desc": "Atender tickets pendientes",
+    "done": true
+  },
+  {
+    "desc": "Realizar pipeline en Dataflow",
+    "done": true
+  }
+]
