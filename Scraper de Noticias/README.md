@@ -37,7 +37,7 @@ python scraper.py
 ---
 
 ## Estructura de archivos
-/
-├── scraper.py # Script principal
-├── requirements.txt # Dependencias
-└── README.md # Este fichero
+
+scraper.py # Script principal
+requirements.txt # Dependencias
+README.md # Este fichero
