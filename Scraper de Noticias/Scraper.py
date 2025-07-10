@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+from urllib.parse import urljoin
 
 
 def obtener_titulares(url):
@@ -19,7 +20,14 @@ def obtener_titulares(url):
         
         for titulo in soup.select('h2.cards-story-opener-fr__title'):
             texto = titulo.get_text(strip=True)
-            titulares.append(texto)
+            
+            liga = titulo.find_parent('a')
+            href = liga['href'] if liga and liga.has_attr('href') else ''
+            
+            #conversiones de rutas relativas -> absolutas
+            url_completa = urljoin(url,href)
+            
+            titulares.append({'titular': texto, 'url':url_completa})
         
         return titulares
 
@@ -32,7 +40,9 @@ def main():
     url = 'https://www.eluniversal.com.mx/'
     titulos = obtener_titulares(url)
     
-    df = pd.DataFrame({'titular':titulos})
+    
+    
+    df = pd.DataFrame(titulos)
     df.to_csv('titulares.csv', index=False,encoding='utf-8-sig')
     
     print(f"{len(titulos)} Titulares guardados en csv")
