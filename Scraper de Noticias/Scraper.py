@@ -22,14 +22,14 @@ def procesar_noticias(url_portada):
         titular = item["titular"]
         href = item["url"]
 
-        # 2) Descargar el texto completo
+      
         try:
             full_url, texto = extraer_texto_completo(url_portada, href)
         except Exception as e:
             print(f"  ! Error descargando {href}: {e}")
             continue
 
-        # 3) Resumir
+     
         try:
             resumen = resumir_con_IA(texto)
         except Exception as e:
@@ -129,8 +129,11 @@ def obtener_titulares(url):
 def main():
     url = "https://www.eluniversal.com.mx/"
 
-    titulos = obtener_titulares(url)
-
+    '''
+    Para sobreescribir el archivo titulares.csv
+    '''
+     
+    # titulos = obtener_titulares(url)
     # df = pd.DataFrame(titulos)
     # df.to_csv('titulares.csv', index=False,encoding='utf-8-sig')
     # print(f"{len(titulos)} Titulares guardados en csv")
