@@ -12,7 +12,7 @@ env/
 # PyInstaller build
 build/
 dist/
-mssloop.spec
+*.spec
 
 
 # Archivos de sesión / BBDD de PyWhatKit
