@@ -1,0 +1,28 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Entorno virtual
+mssvenv/
+
+# Dist/Build de PyInstaller
+build/
+dist/
+
+# Datos de sesión de WhatsApp Web
+User_Data/
+
+# Archivos temporales / sistema
+.DS_Store
+Thumbs.db
+
+# IDEs / editores
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+
+msswhatsDEPRECATED.py
