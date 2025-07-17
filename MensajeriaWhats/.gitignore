@@ -1,19 +1,27 @@
-# Python bytecode
+# Byte-compiled / cache
 __pycache__/
 *.py[cod]
 *.pyo
+*$py.class
 
-# Entorno virtual
-mssvenv/
+# Entornos virtuales
+venv/
+env/
+*.venv/
 
-# Dist/Build de PyInstaller
+# PyInstaller build
 build/
 dist/
+*.spec
 
-# Datos de sesión de WhatsApp Web
+
+# Archivos de sesión / BBDD de PyWhatKit
+PyWhatKit_DB.txt
+
+# Datos de usuario de WhatsApp (no subir)
 User_Data/
 
-# Archivos temporales / sistema
+# Sistema
 .DS_Store
 Thumbs.db
 
@@ -21,9 +29,5 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Logs
-*.log
-
 
 msswhatsDEPRECATED.py
-PyWhatKit_DB.txt
